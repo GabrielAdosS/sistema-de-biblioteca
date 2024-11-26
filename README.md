@@ -1,2 +1,3 @@
 # sistema-de-biblioteca
-sistema de uma biblioteca virtual feita com php, sql, html e css
+Sistema para gerenciar os alugueis de uma biblioteca chama de alexandria, onde podesse alugar livros disponiveis e apagar/deletar alugueis existentes. Feio utilizado, triggers no SQL onde uma abate a quantia alugada da quantidade de livros disponiveis, e outra volta a quantidade de livros disponiveis ao normal quando o aluguel e apagado/deletado. Para fazer a parte backend foi aplicado php utilizando programação orientada a objeto(PDO). O Desing do site foi criado através da ferramente figma, assim como a modelagem do banco de dados com a ferramenta BrModelo, e para estrutura básica e desing foi utilizado html e css.
+ 
