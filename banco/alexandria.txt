@@ -1,0 +1,51 @@
+--criando o bando de dados e usando
+create database alexandria;
+use alexandria;
+
+-- criando as tabelas
+create table livro (
+    id int primary key,
+    nome varchar(100) not null,
+    editora varchar(20) not null,
+    autor varchar(25) not null,
+    qdt int not null
+);
+
+create table alugar (
+    id_alugar int primary key auto_increment,
+    qdt int not null,
+    id_livro int,
+    foreign key (id_livro) references livro(id)
+);
+
+--inserindo os livros
+insert into livro values 
+(1, "Cibersegurança Como proteger seus dados no mundo digital", "Senac", "Carlos A. Prokisch", 20),
+(2, "Psicologia aplicada de C.G.Jung", "BoraLê", "Carl Gustav Jung", 25),
+(3, "Código Limpo Habilidades Práticas do Agile Software", "Alta Books", "Robert C. Martin", 40),
+(4, "O Auto Conhecimento para sobreviver num mundo em transformação", "Senac", "Swami Purnachaitanya", 10),
+(5, "Arquitetura Limpa O guia do Artesão para Estrutura e Design de Sofware", "Alta Books", "Robert C. Martin", 15),
+(6, "A arte da Guerra", "Veríssimo", "Sun Tzu", 30),
+(7, "O codificador Limpo Um código de Conduta para Programadores Profissionais", "Alta Books", "Robert C. Martin", 35),
+(8, "Psicologia Aplicada de Freud", "BoraLê", "Sigmund Freud", 45);
+
+--criando as triggers
+delimiter $
+create trigger tgr_novoaluguel after insert on alugar
+for each row 
+    begin
+        update livro set 
+        qdt = qdt - new.qdt
+        where id = new.id_livro;
+    end $
+delimiter ;
+
+delimiter $
+create trigger tgr_apagaraluguel after delete on alugar
+for each row 
+    begin
+        update livro set 
+        qdt = qdt + old.qdt
+        where id = old.id_livro;
+    end $
+delimiter ;
