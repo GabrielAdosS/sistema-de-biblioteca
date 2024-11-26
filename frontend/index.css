@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "EB Garamond", serif;
+}
+
+:root {
+    --azul-escuro: #4a6572;
+    --verde-menta: #52b788;
+    --rosa-vivo: #e84a5f;
+    --cinza-claro: #f2f2f2;
+}
+
+#header {
+    background-color: var(--azul-escuro);
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 512px;
+}
+
+#header #logo_e_titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#header #logo_e_titulo #logo {
+    height: 75px;
+    width: 75px;
+}
+
+#header #logo_e_titulo #titulo {
+    color: white;
+}
+
+#header #nav {
+    display: flex;
+    gap: 25px;
+}
+
+#header #nav .botao {
+    width: 154px;
+    height: 63px;
+    background-color: var(--verde-menta);
+    border-radius: 6.25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+#header #nav .botao:hover {
+    background-color: var(--rosa-vivo);
+}
+
+#header #nav .botao a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "EB Garamond", serif;
+}
+
+#banner {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#banner img {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(75%);
+    opacity: 0.5;
+}
+
+#banner #texto_banner {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    text-align: left;
+
+}
+
+#banner #texto_banner h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    font-family: "EB Garamond", serif;
+}
+
+#banner #texto_banner p {
+    font-size: 48px;
+    font-weight: normal;
+    color: white;
+    width: 700px;
+    font-family: "EB Garamond", serif;
+}
+
+#sobrenos {
+    width: 100%;
+    height: 842px;
+    background-color: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+#sobrenos h1 {
+    position: absolute;
+    left: 22%;
+    top: 116%;
+    color: var(--rosa-vivo);
+    font-size: 32px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.container #linha {
+    background-color: var(--rosa-vivo);
+    width: 2px;
+    border-radius: 50px;
+    height: 852px;
+}
+
+.texto,
+.recursos {
+    width: 720px;
+    margin: 25px;
+    font-size: 32px;
+}
+
+.texto strong,
+.recursos strong{
+    color: var(--rosa-vivo);
+}
+
+#livros {
+    background-color: var(--rosa-vivo);
+    height: 1915px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 105px;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#livros h1 {
+    color: white;
+    font-size: 32px;
+}
+
+#livros #galeria {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#livros #galeria .card {
+    width: 409.6px;
+    height: 850px;
+    background-color: var(--verde-menta);
+    border-radius: 6.25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#livros #galeria img {
+    width: 309.6px;
+    height: 750px;
+    border-radius: 6.25px;
+}
+
+#footer {
+    background-color: var(--azul-escuro);
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-family: "EB Garamond", serif;
+}
+
+#ApagarAluguel {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    background-color: var(--rosa-vivo);
+    border-radius: 6.25px;
+    width: 550px;
+    height: 199px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ApagarAluguel form,
+#alugar form {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#ApagarAluguel form .cod,
+#alugar form .cod {
+    border: none;
+    width: 150px;
+    height: 20px;
+}
+
+#ApagarAluguel form .botao,
+#alugar form .botao {
+    border: none;
+    width: 50px;
+    height: 20px;
+    background-color: var(--verde-menta);
+}
+
+#alugar {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    background-color: var(--rosa-vivo);
+    border-radius: 6.25px;
+    width: 550px;
+    height: 299px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    }
+    
+    th {
+    background-color: 1  #f2f2f2;
+    }
+
